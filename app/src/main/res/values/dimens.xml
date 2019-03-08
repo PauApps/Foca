@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textMain">24dp</dimen>
+    <dimen name="textTitle">34dp</dimen>
 </resources>

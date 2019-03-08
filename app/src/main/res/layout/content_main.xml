@@ -8,16 +8,169 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/text"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hola Alba"
-        android:textColor="@color/colorBlack"
-        android:textSize="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/textTitle" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenjada1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/menjada1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menjada1"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aliment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/menjada1"
+                android:text="Cereals"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenjada2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeMenjada1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/menjada2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menjada2"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aliment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/menjada2"
+                android:text="Marracons"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenjada3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeMenjada2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/menjada3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menjada3"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aliment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/menjada3"
+                android:text="Sopa"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenjada4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeMenjada3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/menjada4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menjada4"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aliment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/menjada4"
+                android:text=""
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenjada5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeMenjada4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/menjada5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menjada5"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aliment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/menjada5"
+                android:text=""
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textMain"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

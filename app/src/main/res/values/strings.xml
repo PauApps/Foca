@@ -3,4 +3,10 @@
     <string name="action_inici">Inici</string>
     <string name="action_menu">Menu</string>
     <string name="action_compra">Llista de la compra</string>
+
+    <string name="menjada1">Berenar</string>
+    <string name="menjada2">Dinar</string>
+    <string name="menjada3">Sopar</string>
+    <string name="menjada4"></string>
+    <string name="menjada5"></string>
 </resources>
