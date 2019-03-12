@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.action_inici:
-                txt.setText("INICI");
+                //txt.setText("INICI");
                 return true;
             case R.id.action_menu:
-                txt.setText("MENU");
+                //txt.setText("MENU");
                 return true;
             case R.id.action_compra:
-                txt.setText("LLISTA DE LA COMPRA");
+                //txt.setText("LLISTA DE LA COMPRA");
                 return true;
 
         }
