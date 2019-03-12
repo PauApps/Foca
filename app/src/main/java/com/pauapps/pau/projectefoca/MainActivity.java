@@ -10,6 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        SimpleDateFormat currentTime = new SimpleDateFormat("dd/MM/YYYY");
+        TextView today = (TextView) findViewById(R.id.today);
+
+        today.setText("Today is " + currentTime.format(new Date()));
     }
 
     @Override
