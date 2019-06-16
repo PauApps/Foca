@@ -1,12 +1,20 @@
 <resources>
-    <string name="app_name">ProjecteFoca</string>
-    <string name="action_inici">Inici</string>
-    <string name="action_menu">Menu</string>
-    <string name="action_compra">Llista de la compra</string>
+    <string name="app_name">What Eat?</string>
+    <string name="action_inici">My eat day</string>
+    <string name="action_calendar">My Calendar</string>
+    <string name="action_compra">My ShopList</string>
 
     <string name="menjada1">Berenar</string>
     <string name="menjada2">Dinar</string>
     <string name="menjada3">Sopar</string>
     <string name="menjada4"></string>
     <string name="menjada5"></string>
+
+    <!--TODO traduir-->
+    <string name="not_log_in">No se pudo iniciar sesión</string>
+    <string name="log_out">Log Out</string>
+    <string name="revoke">Revoke</string>
+    <string name="not_close_session">No se pudo cerrar sesión</string>
+    <string name="not_revoke">No se pudo revocar el acceso</string>
+    <string name="not_firebase_auth">No se pudo autenticar con Firebase</string>
 </resources>

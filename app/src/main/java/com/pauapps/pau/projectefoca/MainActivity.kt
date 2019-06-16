@@ -1,5 +1,6 @@
 package com.pauapps.pau.projectefoca
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
@@ -9,8 +10,16 @@ import android.widget.TextView
 
 import java.text.SimpleDateFormat
 import java.util.Date
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.android.gms.auth.api.Auth
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.api.GoogleApiClient
+import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val today = findViewById<TextView>(R.id.today)
 
         today.text = "Today is " + currentTime.format(Date())
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -39,16 +49,20 @@ class MainActivity : AppCompatActivity() {
 
 
         when (id) {
-            R.id.action_inici ->
-                //txt.setText("INICI");
-                return true
-            R.id.action_menu ->
+            R.id.action_inici -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.action_menu -> {
+                val intent = Intent(this, Calendar::class.java)
+                startActivity(intent)
                 //txt.setText("MENU");
-                return true
-            R.id.action_compra ->
-                //txt.setText("LLISTA DE LA COMPRA");
-                return true
+            }
+            R.id.action_compra ->{
+
+            }
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
