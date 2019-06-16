@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#c7bf98"
-    android:padding="20dp"
-    >
+    android:orientation="vertical"
+    android:padding="20dp">
+
     <TextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click me to change my text color"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        />
-    <Button
-        android:id="@+id/button_popup"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <LinearLayout
+        android:id="@+id/Layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Close Me"
-        />
-</LinearLayout>
+        android:layout_below="@+id/text_view"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/menjada1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menjada1" />
+
+        <Button
+            android:id="@+id/menjar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Menjar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout1">
+
+        <TextView
+            android:id="@+id/menjada2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menjada1" />
+
+        <Button
+            android:id="@+id/menjar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Menjar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout2">
+
+        <TextView
+            android:id="@+id/menjada3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menjada1" />
+
+        <Button
+            android:id="@+id/menjar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Menjar" />
+    </LinearLayout>
+</RelativeLayout>

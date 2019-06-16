@@ -22,8 +22,8 @@ class Calendar : AppCompatActivity() {
 
         val calendarView = findViewById<CalendarView>(R.id.calendar)
         calendarView?.setOnDateChangeListener { view, year, month, day ->
-            openDay()
             daySelect = day.toString() + "/" + (month + 1) + "/" + year
+            openDay(daySelect)
             val msg = "Selected date is " + day + "/" + (month + 1) + "/" + year
             Toast.makeText(this@Calendar, msg, Toast.LENGTH_SHORT).show()
         }
@@ -31,7 +31,7 @@ class Calendar : AppCompatActivity() {
     }
 
     @SuppressLint("InflateParams", "ObsoleteSdkInt")
-    private fun openDay() {
+    private fun openDay(daySelect: String) {
         // Initialize a new layout inflater instance
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -47,12 +47,10 @@ class Calendar : AppCompatActivity() {
         popupWindow.isOutsideTouchable = true
         popupWindow.isFocusable = true
 
-
         // Set an elevation for the popup window
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             popupWindow.elevation = 10.0F
         }
-
 
         // If API level 23 or higher then execute the code
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -71,19 +69,7 @@ class Calendar : AppCompatActivity() {
 
         // Get the widgets reference from custom view
         val tv = view.findViewById<TextView>(R.id.text_view)
-        val buttonPopup = view.findViewById<Button>(R.id.button_popup)
-
-        // Set click listener for popup window's text view
-        tv.setOnClickListener {
-            // Change the text color of popup window's text view
-            tv.setTextColor(Color.RED)
-        }
-
-        // Set a click listener for popup's button widget
-        buttonPopup.setOnClickListener {
-            // Dismiss the popup window
-            popupWindow.dismiss()
-        }
+        tv.setText("Day: " + daySelect)
 
 
         // Set a dismiss listener for popup window
