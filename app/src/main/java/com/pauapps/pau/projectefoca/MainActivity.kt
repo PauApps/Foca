@@ -10,16 +10,9 @@ import android.widget.TextView
 
 import java.text.SimpleDateFormat
 import java.util.Date
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.android.gms.auth.api.Auth
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.api.GoogleApiClient
-import kotlinx.android.synthetic.main.content_main.*
 
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +24,10 @@ class MainActivity : AppCompatActivity(){
         val today = findViewById<TextView>(R.id.today)
 
         today.text = "Today is " + currentTime.format(Date())
+
+        val db = DB(this)
+
+        db.select()
 
     }
 
@@ -58,7 +55,7 @@ class MainActivity : AppCompatActivity(){
                 startActivity(intent)
                 //txt.setText("MENU");
             }
-            R.id.action_compra ->{
+            R.id.action_compra -> {
 
             }
         }
