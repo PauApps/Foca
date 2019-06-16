@@ -34,10 +34,8 @@ class Calendar : AppCompatActivity() {
     private fun openDay(daySelect: String) {
         // Initialize a new layout inflater instance
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-
         // Inflate a custom view using layout inflater
         val view = inflater.inflate(R.layout.day, null)
-
         // Initialize a new instance of popup window
         val popupWindow = PopupWindow(
                 view, // Custom view to show in popup window
@@ -46,12 +44,10 @@ class Calendar : AppCompatActivity() {
         )
         popupWindow.isOutsideTouchable = true
         popupWindow.isFocusable = true
-
         // Set an elevation for the popup window
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             popupWindow.elevation = 10.0F
         }
-
         // If API level 23 or higher then execute the code
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // Create a new slide animation for popup window enter transition
@@ -65,19 +61,53 @@ class Calendar : AppCompatActivity() {
             popupWindow.exitTransition = slideOut
 
         }
-
-
         // Get the widgets reference from custom view
         val tv = view.findViewById<TextView>(R.id.text_view)
         tv.setText("Day: " + daySelect)
+        // Finally, show the popup window on app
+        TransitionManager.beginDelayedTransition(calendar_layout)
+        popupWindow.showAtLocation(
+                calendar_layout, // Location to display popup window
+                Gravity.CENTER, // Exact position of layout to display popup
+                0, // X offset
+                0 // Y offset
+        )
+    }
 
-
-        // Set a dismiss listener for popup window
-        popupWindow.setOnDismissListener {
-            Toast.makeText(applicationContext, "Popup closed", Toast.LENGTH_SHORT).show()
+    //TODO do layout and .kt
+    fun openMeal(view: View) {
+        // Initialize a new layout inflater instance
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        // Inflate a custom view using layout inflater
+        val view = inflater.inflate(R.layout.meal, null)
+        // Initialize a new instance of popup window
+        val popupWindow = PopupWindow(
+                view, // Custom view to show in popup window
+                LinearLayout.LayoutParams.WRAP_CONTENT, // Width of popup window
+                LinearLayout.LayoutParams.WRAP_CONTENT // Window height
+        )
+        popupWindow.isOutsideTouchable = true
+        popupWindow.isFocusable = true
+        // Set an elevation for the popup window
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            popupWindow.elevation = 10.0F
         }
+        // If API level 23 or higher then execute the code
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            // Create a new slide animation for popup window enter transition
+            val slideIn = Slide()
+            slideIn.slideEdge = Gravity.TOP
+            popupWindow.enterTransition = slideIn
 
+            // Slide animation for popup window exit transition
+            val slideOut = Slide()
+            slideOut.slideEdge = Gravity.RIGHT
+            popupWindow.exitTransition = slideOut
 
+        }
+        // Get the widgets reference from custom view
+        val tv = view.findViewById<TextView>(R.id.text_view)
+        tv.setText("Day: " + daySelect)
         // Finally, show the popup window on app
         TransitionManager.beginDelayedTransition(calendar_layout)
         popupWindow.showAtLocation(
