@@ -1,4 +1,4 @@
-package com.pauapps.pau.projectefoca
+package com.pauapps.pau.projectefoca.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import com.pauapps.pau.projectefoca.Utils.DB
+import com.pauapps.pau.projectefoca.R
 
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -42,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
-        val txt = findViewById<TextView>(R.id.text)
 
 
         when (id) {
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.action_menu -> {
-                val intent = Intent(this, Calendar::class.java)
+                val intent = Intent(this, calendarActivity::class.java)
                 startActivity(intent)
                 //txt.setText("MENU");
             }

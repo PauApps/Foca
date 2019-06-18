@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linear_layout"
+    android:id="@+id/meals"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c7bf98"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -21,13 +20,13 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/menjada1"
+            android:id="@+id/text_nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/menjada1" />
 
-        <Button
-            android:id="@+id/menjar1"
+        <TextView
+            android:id="@+id/nom_menjar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -42,38 +41,17 @@
         android:layout_below="@+id/Layout1">
 
         <TextView
-            android:id="@+id/menjada2"
+            android:id="@+id/text_ingredients"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menjada1" />
+            android:text="Ingredients:" />
 
         <Button
-            android:id="@+id/menjar2"
+            android:id="@+id/add_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:onClick="openMeal"
-            android:text="Menjar" />
+            android:text="+" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/Layout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Layout2">
-
-        <TextView
-            android:id="@+id/menjada3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/menjada1" />
-
-        <Button
-            android:id="@+id/menjar3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:onClick="openMeal"
-            android:text="Menjar" />
-    </LinearLayout>
 </RelativeLayout>

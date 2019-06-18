@@ -1,4 +1,4 @@
-package com.pauapps.pau.projectefoca;
+package com.pauapps.pau.projectefoca.Utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
