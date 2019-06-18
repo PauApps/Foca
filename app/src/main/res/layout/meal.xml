@@ -9,8 +9,8 @@
     <TextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <LinearLayout
@@ -52,7 +52,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:onClick="addItem"
             android:text="+" />
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_below="@+id/Layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
 </RelativeLayout>
