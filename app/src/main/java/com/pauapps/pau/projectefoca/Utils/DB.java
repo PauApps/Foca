@@ -3,6 +3,7 @@ package com.pauapps.pau.projectefoca.Utils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
 
 public class DB extends SQLiteOpenHelper {
 
@@ -72,6 +73,7 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_MEALS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PRODUCTS_MEALS);
         onCreate(db);
+
     }
 
     public void select(){

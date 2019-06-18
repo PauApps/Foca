@@ -27,8 +27,8 @@ class calendarActivity : AppCompatActivity() {
         calendarView?.setOnDateChangeListener { _, year, month, day ->
             daySelect = day.toString() + "/" + (month + 1) + "/" + year
             openDay(daySelect)
-            val msg = "Selected date is " + day + "/" + (month + 1) + "/" + year
-            Toast.makeText(this@calendarActivity, msg, Toast.LENGTH_SHORT).show()
+            //val msg = "Selected date is " + day + "/" + (month + 1) + "/" + year
+            //Toast.makeText(this@calendarActivity, msg, Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -77,9 +77,13 @@ class calendarActivity : AppCompatActivity() {
         )
     }
 
-    //TODO do layout and .kt
     fun openMeal(view: View) {
         val intent = Intent(this, mealActivity::class.java)
+        val men = findViewById<TextView>(R.id.menjada1)
+        //men.setText(R.string.menjada1)
+        //val nameMeal = men.text.toString()
+        intent.putExtra("nameMeal", "Berenar")
+        intent.putExtra("today", daySelect)
         startActivity(intent)
 
     }
