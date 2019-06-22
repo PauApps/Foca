@@ -15,7 +15,7 @@ import java.util.Date
 
 
 class MainActivity : AppCompatActivity() {
-
+//Main Activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
