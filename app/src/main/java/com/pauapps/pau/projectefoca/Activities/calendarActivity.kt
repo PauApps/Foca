@@ -19,6 +19,8 @@ import com.pauapps.pau.projectefoca.R
 //Develop a calendar view
 class calendarActivity : AppCompatActivity() {
     var daySelect: String = ""
+    var text: String = "berenar"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calendar)
@@ -45,6 +47,7 @@ class calendarActivity : AppCompatActivity() {
                 LinearLayout.LayoutParams.WRAP_CONTENT, // Width of popup window
                 LinearLayout.LayoutParams.WRAP_CONTENT // Window height
         )
+
         popupWindow.isOutsideTouchable = true
         popupWindow.isFocusable = true
         // Set an elevation for the popup window
@@ -78,11 +81,12 @@ class calendarActivity : AppCompatActivity() {
     }
 
     fun openMeal(view: View) {
-        val intent = Intent(this, mealActivity::class.java)
-        val men = findViewById<TextView>(R.id.menjada1)
-        //men.setText(R.string.menjada1)
-        //val nameMeal = men.text.toString()
-        intent.putExtra("nameMeal", "Berenar")
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.day, null)
+        var men = view.findViewById<TextView>(R.id.menjada1)
+        var nameMeal = men.text.toString()
+        var intent = Intent(this, mealActivity::class.java)
+        intent.putExtra("nameMeal", nameMeal)
         intent.putExtra("today", daySelect)
         startActivity(intent)
 
