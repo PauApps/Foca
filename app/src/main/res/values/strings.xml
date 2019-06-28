@@ -10,4 +10,7 @@
     <string name="menjada4"></string>
     <string name="menjada5"></string>
 
+    <string name="nom">Name</string>
+    <string name="quantiat">Quantity</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.pauapps.pau.projectefoca.Activities
+package com.pauapps.pau.projectefoca.activities
 
 import android.content.Intent
 import android.os.Bundle

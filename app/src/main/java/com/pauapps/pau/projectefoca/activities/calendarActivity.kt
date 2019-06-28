@@ -1,4 +1,4 @@
-package com.pauapps.pau.projectefoca.Activities
+package com.pauapps.pau.projectefoca.activities
 
 import android.annotation.SuppressLint
 import android.content.Context

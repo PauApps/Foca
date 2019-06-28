@@ -56,11 +56,17 @@
             android:text="+" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relative"
-        android:layout_below="@+id/Layout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout2">
 
-    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical"></LinearLayout>
+
+    </ScrollView>
 </RelativeLayout>
