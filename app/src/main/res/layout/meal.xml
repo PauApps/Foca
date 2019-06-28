@@ -53,7 +53,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:onClick="addItem"
-            android:text="+" />
+            android:text="Add Ingredient" />
+
+        <Button
+            android:id="@+id/add_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:onClick="addmeal"
+            android:text="Okey!" />
     </LinearLayout>
 
     <ScrollView
@@ -63,10 +71,11 @@
 
         <LinearLayout
             android:id="@+id/relative"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:scrollbars="vertical"></LinearLayout>
+            android:scrollbars="vertical">
+        </LinearLayout>
 
     </ScrollView>
 </RelativeLayout>

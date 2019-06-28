@@ -1,9 +1,13 @@
 package com.pauapps.pau.projectefoca.Utils;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class DB extends SQLiteOpenHelper {
 
@@ -42,6 +46,8 @@ public class DB extends SQLiteOpenHelper {
                 "( '" + TABLE_MEASURE_ID + "' INTEGER  PRIMARY KEY AUTOINCREMENT, "
                 + TABLE_MEASURE_NAME + " TEXT NOT NULL, "
                 + TABLE_MEASURE_VALUE + " TEXT NOT NULL);");
+        insertMeasures(db);
+
 
         //Create table products
         db.execSQL("CREATE TABLE " + TABLE_PRODUCTS +
@@ -76,8 +82,41 @@ public class DB extends SQLiteOpenHelper {
 
     }
 
-    public void select(){
+    public void select() {
         SQLiteDatabase db = this.getReadableDatabase();
-        db.execSQL("SELECT * FROM "+TABLE_PRODUCTS+";");
+        db.execSQL("SELECT * FROM " + TABLE_PRODUCTS + ";");
+    }
+
+    public void insertMeasures(SQLiteDatabase db) {
+        ContentValues cv = new ContentValues();
+        cv.put(TABLE_MEASURE_NAME, "Quilogram");
+        cv.put(TABLE_MEASURE_VALUE, "Kg");
+        db.insert(TABLE_MEASURE, null, cv);
+
+        cv.put(TABLE_MEASURE_NAME, "Gram");
+        cv.put(TABLE_MEASURE_VALUE, "g");
+        db.insert(TABLE_MEASURE, null, cv);
+
+        cv.put(TABLE_MEASURE_NAME, "Litre");
+        cv.put(TABLE_MEASURE_VALUE, "L");
+        db.insert(TABLE_MEASURE, null, cv);
+    }
+
+    public ArrayList<String> getMeasures() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT " + TABLE_MEASURE_NAME + "," + TABLE_MEASURE_VALUE +
+                " FROM " + TABLE_MEASURE, null);
+        ArrayList<String> value = new ArrayList<String>();
+        value.add("Select type of measure: ");
+        if (c.moveToFirst()) {
+            do {
+                // Passing values
+                value.add(c.getString(1));
+                // Do something Here with values
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return value;
     }
 }

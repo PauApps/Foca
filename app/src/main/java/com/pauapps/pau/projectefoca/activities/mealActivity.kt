@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
 import com.pauapps.pau.projectefoca.R
+import com.pauapps.pau.projectefoca.Utils.DB
 
 
 class mealActivity : AppCompatActivity() {
@@ -21,6 +22,8 @@ class mealActivity : AppCompatActivity() {
     }
 
     fun addItem(v: View) {
+        val db = DB(this)
+
         var relative: LinearLayout = findViewById<LinearLayout>(R.id.relative)
         var linear = LinearLayout(applicationContext)
 
@@ -32,6 +35,14 @@ class mealActivity : AppCompatActivity() {
         quantity.setHint(R.string.quantiat)
         linear.addView(quantity)
 
+        var type = Spinner(applicationContext)
+        type.setAdapter(ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, db.getMeasures()));
+        linear.addView(type)
+
         relative.addView(linear)
+    }
+
+    fun addMeal(v: View) {
+
     }
 }
