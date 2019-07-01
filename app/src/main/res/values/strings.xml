@@ -1,12 +1,21 @@
 <resources>
-    <string name="app_name">ProjecteFoca</string>
-    <string name="action_inici">Inici</string>
-    <string name="action_menu">Menu</string>
-    <string name="action_compra">Llista de la compra</string>
+    <string name="app_name">What Eat?</string>
+    <string name="action_inici">My eat day</string>
+    <string name="action_calendar">My Calendar</string>
+    <string name="action_compra">My ShopList</string>
 
     <string name="menjada1">Berenar</string>
     <string name="menjada2">Dinar</string>
     <string name="menjada3">Sopar</string>
     <string name="menjada4"></string>
     <string name="menjada5"></string>
+
+    <string name="nom">Name</string>
+    <string name="quantiat">Quantity</string>
+    <string name="plus">+</string>
+
+    <string name="idNam">name</string>
+    <string name="idQuantity">quantity</string>
+    <string name="idType">type</string>
+
 </resources>

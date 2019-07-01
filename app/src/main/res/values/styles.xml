@@ -17,4 +17,21 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/red</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:colorBackground">@color/yellow</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="CalenderViewunfocusedMonthDateColor" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
 </resources>

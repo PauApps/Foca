@@ -1,17 +1,21 @@
-package com.pauapps.pau.projectefoca
+package com.pauapps.pau.projectefoca.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import com.pauapps.pau.projectefoca.Utils.DB
+import com.pauapps.pau.projectefoca.R
 
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class MainActivity : AppCompatActivity() {
 
+class MainActivity : AppCompatActivity() {
+//Main Activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         val today = findViewById<TextView>(R.id.today)
 
         today.text = "Today is " + currentTime.format(Date())
+
+        val db = DB(this)
+
+        db.select()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -35,20 +44,23 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
-        val txt = findViewById<TextView>(R.id.text)
 
 
         when (id) {
-            R.id.action_inici ->
-                //txt.setText("INICI");
-                return true
-            R.id.action_menu ->
+            R.id.action_inici -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.action_menu -> {
+                val intent = Intent(this, CalendarActivity::class.java)
+                startActivity(intent)
                 //txt.setText("MENU");
-                return true
-            R.id.action_compra ->
-                //txt.setText("LLISTA DE LA COMPRA");
-                return true
+            }
+            R.id.action_compra -> {
+
+            }
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
