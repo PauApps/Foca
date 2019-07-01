@@ -22,8 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.calendarActivity"></activity>
-        <activity android:name=".activities.mealActivity"></activity>
+        <activity android:name=".activities.CalendarActivity"></activity>
+        <activity android:name=".activities.MealActivity"></activity>
     </application>
 
 </manifest>

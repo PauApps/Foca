@@ -14,4 +14,8 @@
     <string name="quantiat">Quantity</string>
     <string name="plus">+</string>
 
+    <string name="idNam">name</string>
+    <string name="idQuantity">quantity</string>
+    <string name="idType">type</string>
+
 </resources>

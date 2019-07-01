@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.action_menu -> {
-                val intent = Intent(this, calendarActivity::class.java)
+                val intent = Intent(this, CalendarActivity::class.java)
                 startActivity(intent)
                 //txt.setText("MENU");
             }

@@ -17,7 +17,7 @@ import com.pauapps.pau.projectefoca.R
 
 
 //Develop a calendar view
-class calendarActivity : AppCompatActivity() {
+class CalendarActivity : AppCompatActivity() {
     var daySelect: String = ""
     var text: String = "berenar"
 
@@ -30,7 +30,7 @@ class calendarActivity : AppCompatActivity() {
             daySelect = day.toString() + "/" + (month + 1) + "/" + year
             openDay(daySelect)
             //val msg = "Selected date is " + day + "/" + (month + 1) + "/" + year
-            //Toast.makeText(this@calendarActivity, msg, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this@CalendarActivity, msg, Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -85,7 +85,7 @@ class calendarActivity : AppCompatActivity() {
         val view = inflater.inflate(R.layout.day, null)
         var men = view.findViewById<TextView>(R.id.menjada1)
         var nameMeal = men.text.toString()
-        var intent = Intent(this, mealActivity::class.java)
+        var intent = Intent(this, MealActivity::class.java)
         intent.putExtra("nameMeal", nameMeal)
         intent.putExtra("today", daySelect)
         startActivity(intent)
@@ -111,7 +111,7 @@ class calendarActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.action_menu -> {
-                val intent = Intent(this, calendarActivity::class.java)
+                val intent = Intent(this, CalendarActivity::class.java)
                 startActivity(intent)
                 //txt.setText("MENU");
             }
